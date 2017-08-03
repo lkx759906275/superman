@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<meta name="360-site-verification" content="e9451b1e56bd1bb374025441b96ba0a7" />
+<link href="/css/layout.css" rel="stylesheet" type="text/css">
+<link href="/css/swiper.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="banner">
+  <!-- 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {dede:arclist typeid=31}
+            <div class="swiper-slide"><image src="[field:litpic /]" alt="{dede:global.cfg_webname/}"></div>
+          {/dede:arclist}
+        </div>
+        <!-- 圆点按键 -->
+        <div class="swiper-pagination"></div>
+        <!-- 左右按键 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<div class="plate">
+  <div class="plate_bt">
+  {dede:type typeid='6'}
+    <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank"> 经营项目 </a>
+  {/dede:type} 
+  </div>
+  <ul class="case_plate">
+    {dede:arclist typeid='6' row='8'}
+    <li>
+      <div class="img"><img src="[field:litpic/]" width="294" height="210"></div>
+      <a href="[field:arcurl/]" class="bl">
+      <div class="case_plate_txt"> [field:title/] </div>
+      <div class="case_plate_ico"> </div>
+      </a> </li>
+    {/dede:arclist}
+  </ul>
+</div>
+<div class="jd">
+  <div class="jd_con"> 
+    {dede:type typeid='1'}
+    <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="a">
+      <div>关于我们</div>
+    </a>
+    {/dede:type}
+    {dede:type typeid='6'}
+      <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="b">
+      <div>经营项目</div>
+      </a> 
+    {/dede:type}
+    {dede:type typeid='12'}
+      <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="c">
+      <div>招商引资</div>
+      </a>
+    {/dede:type}
+    {dede:type typeid='30'}
+    <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="d">
+      <div>联系我们</div>
+    </a> 
+    {/dede:type}
+  </div>
+</div>
+<div class="plate">
+  <div class="plate_bt"> <a href="#"> 未来规划 </a> </div>
+  <div class="plan_box">
+    <div class="plan">
+      <div class="plan_img"> <a href="#"><img src="/images/plan_img1.png"></a> </div>
+      <div class="plan_con">
+        <div class="plan_con_bt"> <a href="#">酒品酿制 </a> </div>
+        <div class="plan_con_txt"> 引用当地自然的自涌泉水，从而酿制的原浆酒，味道醇厚，香气怡人，入口柔顺。</div>
+        <a class="more bl" href="#">
+        <div class="more_txt">MORE</div>
+        </a> </div>
+    </div>
+    <div class="plan">
+      <div class="plan_img"> <a href="#"><img src="/images/plan_img2.png"></a> </div>
+      <div class="plan_con">
+        <div class="plan_con_bt"> <a href="#">旅游文化 </a> </div>
+        <div class="plan_con_txt"> 以旅游文化开发为杠杆，开发建设集“旅游、农业、文化、康养、休闲、娱乐、运动”于一体的大、中、小综合体旅游项目。</div>
+        <a class="more bl" href="#">
+        <div class="more_txt">MORE</div>
+        </a> </div>
+    </div>
+    <div class="plan">
+      <div class="plan_img"> <a href="#"><img src="/images/plan_img3.png"></a> </div>
+      <div class="plan_con">
+        <div class="plan_con_bt"> <a href="#">农副产业 </a> </div>
+        <div class="plan_con_txt"> 以林下养殖，鸡，羊，牛，猪等家禽来带动当地经济发展</div>
+        <a class="more bl" href="#">
+        <div class="more_txt">MORE</div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<div class="plate">
+  <div class="plate_bt"> {dede:type typeid='24'}<a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank"> 新闻资讯 </a>{/dede:type} </div>
+  <div class="news_box">
+    <div class="news_con fl">
+      <div class="news_box_bt" id="news_box_btl"> {dede:type typeid='25'} <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="a">公司动态</a>{/dede:type} <a href="javascript:;" class="b cur">1</a> <a href="javascript:;" class="b">2</a></div>
+      <ul class="news_list" id="news_listl">
+        {dede:arclist typeid='25' row='4' }
+        <li style="display:none"> <a href="[field:arcurl/]" class="news_list_img bl fl"> <img src="[field:litpic/]" width="70" height="70"/>
+          <div class="img_round"></div>
+          </a>
+          <div class="news_list_txt fr">
+            <div class="bt"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></div>
+            <div class="con">[field:body function='cn_substr(html2text(@me),180)'/]...</div>
+          </div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="news_con fr">
+      <div class="news_box_bt" id="news_box_btr"> {dede:type typeid='26'} <a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank" class="a">行业资讯</a>{/dede:type} <a href="javascript:;" class="b cur">1</a> <a href="javascript:;" class="b">2</a></div>
+      <ul class="news_list" id="news_listr">
+        {dede:arclist typeid='26' row='4' }
+        <li style="display:none"> <a href="[field:arcurl/]" class="news_list_img bl fl"> <img src="[field:litpic/]" width="70" height="70"/>
+          <div class="img_round"></div>
+          </a>
+          <div class="news_list_txt fr">
+            <div class="bt"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></div>
+            <div class="con">[field:body function='cn_substr(html2text(@me),180)'/]...</div>
+          </div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="plate">
+  <div class="plate_bt"> {dede:type typeid='1'}<a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank"> 关于我们 </a>{/dede:type} </div>
+  <div class="news_box">
+    <div class="news_con fl">
+      <div class="about_img fl"> <img src="/images/about_img1.jpg"> </div>
+      <div class="about_con fr">
+        <div class="about_con_bt"> {dede:type typeid='1'}<a href="[field:typelink /]" title="[field:fulltitle/]" target="_blank">万全县君威林牧生态有限公司</a>{/dede:type} </div>
+        <div class="about_con_txt">{dede:sql sql='Select content from #@__arctype where id=2'}
+          [field:content function='cn_substr(html2text(@me),400)'/].....
+          {/dede:sql}</div>
+      </div>
+    </div>
+    <div class="news_con fr">
+      <div class="about_img fl"> <img src="/images/about_img2.jpg"> </div>
+      <div class="about_con fr"> {dede:arclist typeid=29 row=1 flag=p channelid='1' addfields='body'}
+        <div class="about_con_bt zp_bt"> <a href="[field:arcurl/]"> [field:title/]</a> </div>
+        <div class="zp_time">[field:pubdate function="GetDateTimeMK(@me)"/]</div>
+        <div class="about_con_txt zp_txt"> [field:body function='cn_substr(html2text(@me),300)'/]......</div>
+        {/dede:arclist} </div>
+    </div>
+  </div>
+</div>
+<div class="link">
+  <p>友情链接：{dede:flink titlelen='20' row='10' type='text'}
+              [field:link /] 
+            {/dede:flink} 
+  </p>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
+<script type="text/javascript" src="/js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="/js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".main_visual").hover(function () {
+            $("#btn_prev,#btn_next").fadeIn()
+        }, function () {
+            $("#btn_prev,#btn_next").fadeOut()
+        })
+        $dragBln = false;
+        $(".main_image").touchSlider({
+            flexible: true,
+            speed: 500,
+            btn_prev: $("#btn_prev"),
+            btn_next: $("#btn_next"),
+            paging: $(".flicking_con a"),
+            counter: function (e) {
+                $(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+            }
+        });
+        $(".main_image").bind("mousedown", function () {
+            $dragBln = false;
+        })
+        $(".main_image").bind("dragstart", function () {
+            $dragBln = true;
+        })
+        $(".main_image a").click(function () {
+            if ($dragBln) {
+                return false;
+            }
+        })
+        timer = setInterval(function () { $("#btn_next").click(); }, 5000);
+        $(".main_visual").hover(function () {
+            clearInterval(timer);
+        }, function () {
+            timer = setInterval(function () { $("#btn_next").click(); }, 5000);
+        })
+        $(".main_image").bind("touchstart", function () {
+            clearInterval(timer);
+        }).bind("touchend", function () {
+            timer = setInterval(function () { $("#btn_next").click(); }, 5000);
+        })
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#news_listl li:eq(0)").show();
+        $("#news_listl li:eq(1)").show();
+        $("#news_listr li:eq(0)").show();
+        $("#news_listr li:eq(1)").show();
+        var count = $("#countid").val();
+        if (count % 2 == 1)
+            count = count / 2 + 1;
+        else
+            count = count / 2;
+        var count2 = $("#countid2").val();
+        if (count2 % 2 == 1)
+            count2 = count2 / 2 + 1;
+        else
+            count2 = count2 / 2;
+        if(count<8)
+        {           
+            $("#news_box_btl a:eq(8)").hide();
+            if (count < 7) {
+                $("#news_box_btl a:eq(7)").hide();
+                if (count < 6) {
+                    $("#news_box_btl a:eq(6)").hide();
+                    if (count < 5) {
+                        $("#news_box_btl a:eq(5)").hide();
+                        if (count < 4) {
+                            $("#news_box_btl a:eq(4)").hide();
+                            if (count < 3) {
+                                $("#news_box_btl a:eq(3)").hide();
+                                if (count < 2) {
+                                    $("#news_box_btl a:eq(2)").hide();
+                                    if (count < 2) {
+                                        $("#news_box_btl a:eq(2)").hide();
+                                        if (count < 1) {
+                                            $("#news_box_btl a:eq(1)").hide();
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      
+        if (count2 < 8) {
+            $("#news_box_btr a:eq(8)").hide();
+            if (count2 < 7) {
+                $("#news_box_btr a:eq(7)").hide();
+                if (count2 < 6) {
+                    $("#news_box_btr a:eq(6)").hide();
+                    if (count2 < 5) {
+                        $("#news_box_btr a:eq(5)").hide();
+                        if (count2 < 4) {
+                            $("#news_box_btr a:eq(4)").hide();
+                            if (count2 < 3) {
+                                $("#news_box_btr a:eq(3)").hide();
+                                if (count2 < 2) {
+                                    $("#.news_box_btr a:eq(2)").hide();
+                                    if (count2 < 2) {
+                                        $("#news_box_btr a:eq(2)").hide();
+                                        if (count2 < 1) {
+                                            $("#news_box_btr a:eq(1)").hide();
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        $("#news_box_btl a").each(function (i) {
+            $(this).mouseover(function () {               
+                $(this).addClass("cur").siblings().removeClass("cur");
+                if (i != 0) {
+                    $("#news_listl li").hide();
+                    $("#news_listl li:eq(" + (i - 1) * 2 + ")").show();
+                    $("#news_listl li:eq(" + ((i - 1) * 2 + 1) + ")").show();
+                }
+            })          
+        })
+        $("#news_box_btr a").each(function (i) {
+            $(this).mouseover(function () {
+                $(this).addClass("cur").siblings().removeClass("cur");
+                if (i != 0) {
+                    $("#news_listr li").hide();
+                    $("#news_listr li:eq(" + (i - 1) * 2 + ")").show();
+                    $("#news_listr li:eq(" + ((i - 1) * 2 + 1) + ")").show();
+                }
+            })
+        })
+    })
+</script>
+<!--[if IE 6]>
+    <script type="text/javascript" src="/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix('div,img,a,a:hover,input,ul,li');</script>
+<![endif]-->

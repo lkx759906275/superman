@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>111</title>
+	<style>
+		#goumai{margin:50px 0px;background: url(../img/gm_bj.jpg) right no-repeat;}
+		#goumai table td{padding-bottom: 22px;font-size: 14px;color: #534c4c;}
+		#goumai table td .text{border:1px solid #d1c0a5;height:36px;line-height: 36px;width:315px;font-family: "微软雅黑"; font-size:14px; text-indent: 8px;}
+		#goumai table td textarea{border:1px solid #d1c0a5;width:533px;height:133px;line-height: 25px;padding:5px;}
+		#goumai table td .sub{width:278px;height:44px;line-height: 44px;border:none;background: #cb3222;font-size: 20px;color: #FFFFFF;font-family: "微软雅黑"; cursor: pointer;}
+	</style>
+</head>
+<body>
+
+<form action="c.php" method="post" id="goumai">
+	<table cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+			<td width="135" align="right">姓名：</td>
+			<td><input name="nickname" class="text" type="text" value="" required=""></td>
+		</tr>
+		<tr>
+			<td width="135" align="right">手机号：</td>
+			<td><input name="contact" class="text" type="tel" value="" required="" pattern="^(1)[0-9]{10}$"></td>
+		</tr>
+		<tr>
+			<td width="135" align="right">邮箱：</td>
+			<td><input name="email" class="text" type="email" value="" required="" pattern="^[\w\-\.]+@[\w\-\.]+(\.\w+)+$"></td>
+		</tr>
+		<tr>
+			<td width="135" align="right">QQ：</td>
+			<td><input name="qq" class="text" type="qq" value="" required=""></td>
+		</tr>
+		<tr>
+			<td width="135" align="right" valign="top">留言内容：</td>
+			<td><input type="hidden" name="action" id="action" value="add" required="">
+            <textarea name="content" cols="" rows=""></textarea></td>
+		</tr>
+		<tr>
+			<td width="135" align="right">验证码：</td>
+			<td>
+				<input name="validate" type="text" id="validate" class="msg_input" style="width:120px;margin-right:5px;"> 
+               <img id="ckstr" src="data/captcha/ckstr.php" title="看不清？点击更换" align="absmiddle" style="cursor:pointer;" onclick="this.src=this.src+'?'"> <a href="javascript:;" onclick="var v=document.getElementById('ckstr');v.src=v.src+'?';return false;">看不清?</a>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input class="sub" type="submit" value="内容提交"></td>
+		</tr>
+		
+		
+		
+	</tbody></table>
+</form>
+
+</body>
+</html>
+	
